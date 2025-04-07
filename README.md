@@ -38,7 +38,7 @@ This project transforms a traditional joke generator application into a decentra
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/decentralized-jokebox-ai.git](https://github.com/okuspocus/Team9EncodeDeAIBootcamp2025_week5-repository
+   git clone https://github.com/okuspocus/Team9EncodeDeAIBootcamp2025_week5-repository
    cd decentralized-jokebox-ai
    ```
 
