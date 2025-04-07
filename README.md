@@ -59,3 +59,51 @@ This project transforms a traditional joke generator application into a decentra
 
 5. **Abrir** [http://localhost:3000](http://localhost:3000) **en tu navegador**
 
+## Smart Contract Integration
+
+The project includes a smart contract that implements:
+
+- **Zero-Knowledge Offensive Joke Penalties:** Using the Optimistic ML approach from the DeAI course
+- **Token Economics:** For joke evaluation and curation
+- **Reputation System:** Tracking user behavior over time
+
+### Interacting with the Smart Contract
+
+- Connect your wallet to the application
+- Generate jokes using the interface
+- Stake tokens when submitting jokes
+- Evaluate jokes to earn reputation
+- Report offensive jokes through the zero-knowledge system
+
+## Architecture
+
+### Decentralized Inference
+
+The application uses Venice AI's API, which is compatible with the OpenAI API specification but provides:
+- Privacy-preserving computation
+- Uncensored models
+- Decentralized inference infrastructure
+- Token economics (VVV tokens)
+
+### Zero-Knowledge Offensive Joke Penalties
+
+Implements the Optimistic ML approach where:
+1. Jokes are assumed appropriate unless challenged
+2. Challenges can be submitted with zero-knowledge proofs
+3. Penalties are enforced through the smart contract
+4. User reputation affects stake requirements
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Venice AI Protocol for decentralized inference
+- Optimistic ML approach for zero-knowledge verification
+
+
