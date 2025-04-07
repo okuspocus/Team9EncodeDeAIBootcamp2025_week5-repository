@@ -4,7 +4,6 @@ pragma solidity ^0.8.20;
 /**
  * @title JokeEvaluationContract
  * @dev Implements a zero-knowledge offensive joke penalty system using the Optimistic ML approach
- * Based on concepts from Encode Club AI Bootcamp DeAI course (Lessons 17-20)
  */
 contract JokeEvaluationContract {
     // Token for reputation and penalties
