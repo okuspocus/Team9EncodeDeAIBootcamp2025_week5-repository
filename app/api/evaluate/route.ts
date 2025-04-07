@@ -18,24 +18,27 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Using type assertion to bypass TypeScript type checking for Venice AI parameters
     const completion = await venice.chat.completions.create({
-      model: 'mistral-7b', // Using a smaller model that works with free accounts
+      model: 'llama-3.3-70b', // Using Venice's Llama 3.3 70B model instead of gpt-4o-mini
       messages: [
         {
           role: 'system',
-          content: `You are a joke evaluation assistant. Analyze jokes for humor, appropriateness, and offensive content. 
-          Keep your evaluation concise with format: Funny: true/false, Appropriate: true/false, Offensive: true/false, Comments: brief explanation.`
+          content: `You are a joke evaluation assistant. Analyze jokes for their humor, appropriateness, and potential offensive content. 
+          Provide a structured evaluation with boolean values for funny, appropriate, and offensive, along with brief comments.
+          Be honest but constructive in your evaluation.`
         },
         {
           role: 'user',
-          content: `Evaluate this joke: "${joke}"`
+          content: `Please evaluate this joke: "${joke}"`
         }
       ],
-      temperature: 0.5, // Reduced temperature for more consistent evaluations
-      max_tokens: 100 // Reduced from 200 to save tokens
-      // Venice-specific parameters removed to fix TypeScript errors
-    } as any);
+      temperature: 0.7,
+      max_tokens: 200,
+      venice_parameters: {
+        include_venice_system_prompt: false, // Disable Venice's system prompts for evaluation to ensure consistent results
+        enable_web_search: false // Disable web search for evaluation
+      }
+    });
 
     const response = completion.choices[0]?.message?.content;
     
