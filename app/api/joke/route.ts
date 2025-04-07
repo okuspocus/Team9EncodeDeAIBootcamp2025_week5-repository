@@ -85,16 +85,18 @@ export async function POST(request: NextRequest) {
     }
     
     // Call Venice AI API (using OpenAI-compatible interface)
-    // Using type assertion to bypass TypeScript type checking for Venice AI parameters
     const completion = await venice.chat.completions.create({
-      model: 'mistral-7b', // Using a smaller model that works with free accounts
+      model: 'llama-3.3-70b', // Using Venice's Llama 3.3 70B model instead of gpt-4o-mini
       messages: apiMessages,
       temperature: temperature,
-      max_tokens: 150, // Reduced from 300 to save tokens
+      max_tokens: 300,
       frequency_penalty: 0.8, // Increase frequency penalty to reduce repetition
-      presence_penalty: 0.6  // Increase presence penalty to encourage new content
-      // Venice-specific parameters removed to fix TypeScript errors
-    } as any);
+      presence_penalty: 0.6,  // Increase presence penalty to encourage new content
+      venice_parameters: {
+        include_venice_system_prompt: true, // Use Venice's system prompts for uncensored responses
+        enable_web_search: 'auto' // Enable web search capability if needed
+      }
+    });
     
     // Extract the joke from the response
     const joke = completion.choices[0]?.message?.content || 'Sorry, I couldn\'t come up with a joke right now.';
