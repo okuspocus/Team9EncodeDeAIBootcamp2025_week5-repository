@@ -104,6 +104,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- Encode Club AI Bootcamp DeAI course (Lessons 17-20)
+- Encode Club AI Bootcamp DeAI course
 - Venice AI Protocol for decentralized inference
 - Optimistic ML approach for zero-knowledge verification
