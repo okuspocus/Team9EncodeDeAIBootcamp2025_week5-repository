@@ -64,7 +64,7 @@ This project transforms a traditional joke generator application into a decentra
 
 The project includes a smart contract that implements:
 
-1. **Zero-Knowledge Offensive Joke Penalties**: Using the Optimistic ML approach from the DeAI course
+1. **Zero-Knowledge Offensive Joke Penalties**: Using the Optimistic ML approach
 2. **Token Economics**: For joke evaluation and curation
 3. **Reputation System**: Tracking user behavior over time
 
