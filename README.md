@@ -6,7 +6,7 @@ A decentralized joke generator application that uses Venice AI for inference and
 
 This project transforms a traditional joke generator application into a decentralized application (dApp) by:
 
-1. Replacing centralized OpenAI API with Venice AI's decentralized inference platform
+1. Using Venice AI's decentralized inference platform
 2. Implementing a zero-knowledge offensive joke penalty system using the Optimistic ML approach
 3. Creating a token economy for joke evaluation and curation
 
